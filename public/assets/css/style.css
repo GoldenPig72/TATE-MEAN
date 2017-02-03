@@ -1,0 +1,36 @@
+main 	{
+	padding-top: 30px;
+	background: red;
+}
+
+/* HEADER ================================================= */
+header .navbar	{
+	border-radius: 0;
+}
+
+/* ANIMATIONS ================================================= */
+
+.spinner {
+	animation:spin ls infinite;
+	-webkit-animation:spin ls infinite;
+	-moz-animation:spin ls infinite;
+}
+
+@keyframes spin{
+	from {transform:rotate(0deg);}
+	to {transform:rotate(360deg);}
+}
+
+@-webkit-keyframes spin{
+	from {	-webkit-transform:rotate(0deg);}
+	to 	{	-webkit-transform:rotate(360deg);}
+}
+
+@-moz-keyframes spin{
+	from {	-moz-transform:rotate(0deg);}
+	to {	-moz-transform:rotate(0deg);	}
+}
+
+.nav navbar-nav navbar-right{
+	background: RED;
+}
