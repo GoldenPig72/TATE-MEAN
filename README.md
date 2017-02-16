@@ -4,6 +4,8 @@ This project is part of our Agile Coach Team's attempts to deploy a MEAN (MongoD
 
 This document will contain the instructions for new members joining the team to get up and running with the local environments and with access to the necessary repositories and cloud platforms.
 
+A great resource for setting up a MEAN stack application can be found [here](https://thecodebarbarian.wordpress.com/2013/07/22/introduction-to-the-mean-stack-part-one-setting-up-your-tools/).
+
 ## Getting Set Up
 
 ###Local Setup
@@ -41,18 +43,21 @@ Install Windows Updates:
 5. After the restart repeat the steps above again until no more updates are available.
 6. Download the Visual C++ Redistributable:
 
-```
-For Windows 64-bit
+__For Windows 64-bit__
 [Link for the 64-bit Microsoft Visual C++ Redistributable file](http://download.microsoft.com/download/9/3/F/93FCF1E7-E6A4-478B-96E7-D4B285925B00/vc_redist.x64.exe) 
 
-For Windows 32-bit
+__For Windows 32-bit__
 Visual C++ Redistributable for Visual Studio 2017 (32-bit)
-```
 
 7. Run the vcredist_x64.exe (64-bit) or vcredist_x86.exe (32-bit) and select Uninstall
 
 8. Run the .exe again and select Install
 
+#####MongoDB Data path
+
+MongoDB expects a data directory that defaults to /data/db. If you want to specify a custom data path, you need to start up Mongo at the commandline with:
+
+ `mongod --dbpath /data/<path> --port <port no>`
 
 ##GitHub
 
@@ -74,4 +79,4 @@ Visual C++ Redistributable for Visual Studio 2017 (32-bit)
 
 Command to create an mlab addon to the heroku instance that provisions a mangodb:
 
-```$ heroku addons:create mongolab:sandbox --app pacific-beyond-24921```
+``$ heroku addons:create mongolab:sandbox --app pacific-beyond-24921```
