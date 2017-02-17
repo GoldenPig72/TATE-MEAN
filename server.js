@@ -32,7 +32,8 @@ app.use(function(req,res,next){
 
 //==================================--DB--====================================
 //mongoose.connect('mongodb://app:myPassword@localhost/appDB');
-mongoose.connect('mongodb://app:mySecretPassword@ds149479.mlab.com:49479/heroku_dhk7z4m9');
+//mongoose.connect('mongodb://app:mySecretPassword@ds149479.mlab.com:49479/heroku_dhk7z4m9');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://app:myPassword@localhost/appDB')
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function (callback) {
