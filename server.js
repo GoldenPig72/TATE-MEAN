@@ -6,7 +6,7 @@ var express = require ('express'); //EXPRESS Package
 var app = express();	//define our app using express
 var bodyParser = require('body-parser');// get body-parser
 var morgan = require('morgan'); //use to see requests
-var mongoose = require('mongoose') //for working with mongoDB
+var mongoose = require("mongoose") //for working with mongoDB
 var config = require('./config'); //get config file
 var path = require('path');
 var jwt = require('jsonwebtoken');
@@ -31,7 +31,8 @@ app.use(function(req,res,next){
 });
 
 //==================================--DB--====================================
-mongoose.connect('mongodb://app:myPassword@localhost/appDB');
+//mongoose.connect('mongodb://app:myPassword@localhost/appDB');
+mongoose.connect('mongodb://app:mySecretPassword@ds149479.mlab.com:49479/heroku_dhk7z4m9');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function (callback) {
