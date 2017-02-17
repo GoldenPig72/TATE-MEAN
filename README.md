@@ -1,4 +1,6 @@
-# TATE-MEAN
+# TATE-MEAN Cloud Development Project
+
+**PLEASE DON'T EDIT HERE! THIS TEXT IS PORTED OVER FROM WHERE WE MAINTAIN IT ON OUR GITHUB REPOSITORY.** 
 
 This project is part of our Agile Coach Team's attempts to deploy a MEAN (MongoDB, Express.js, Angular.js, Node.js) stack on a cloud platform (in this case Heroku) so that we can learn the ins and outs of actual cloud developing and deployment.
 
