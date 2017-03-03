@@ -127,7 +127,7 @@ app.route('/register')
 				else
 					return res.send(err);
 			}
-			res.json({ message:'User created!' });
+			res.json({ message:'User created! HowBowDa' });
 		});
 	});
 
